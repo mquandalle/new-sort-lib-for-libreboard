@@ -1,0 +1,25 @@
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> colors}}
+  {{> items}}
+</body>
+
+<template name="colors">
+  <div class="colors">
+  {{#each colors}}
+    {{> color}}
+  {{/each}}
+  </div>
+</template>
+
+<template name="color">
+  <div class="square" style="background-color: {{this}}"></div>
+</template>
+
+<template name="items">
+  <div id="container">
+  {{#each items}}
+    <div class="item">{{name}} ({{sort}})</div>
+  {{/each}}
+  </div>
+</template>
